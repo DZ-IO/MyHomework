@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圆角和渐变</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: #6cf;
+            padding: 30px;
+        }
+        #d1{
+            border-radius: 20px;
+        }
+        #d1:hover{
+            height: 50px;
+            background-color: #99f;
+        }
+        #d2{
+            border-radius: 20px 100px;
+        }
+        #d3{
+            border-radius: 20px 50px 100px;
+        }
+        #d4{
+            border-radius: 20px 50px 100px 75px;
+        }
+        #d5{
+            border-radius: 50%;
+            transition: 2s;
+        }
+        #d5:hover{
+            transform: rotate(540deg);
+            background-color: #99f;
+        }
+        #d6{
+            border-radius: 50%;
+            height: 50px;
+            transition: 2s;
+        }
+        #d6:hover{
+            height: 100px;
+        }
+        /* 彩蛋 */
+        @keyframes s0 {
+            to{border-radius: 0px;}
+        }
+        .egg{
+            position: relative;
+        }
+        .egg:hover{
+            animation: s0 2s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        20px圆角
+        <br>
+        （会变色+变形，突变）
+    </div>
+    <hr>
+    <div id="d2" class="egg">
+        左上右下20px，左下右上100px
+        <br>
+        （诺基亚有款手机好像就这设计）
+    </div>
+    <hr>
+    <div id="d3" class="egg">
+        20px 50px
+        <br>
+        （空位跟对角）
+        <br>
+        50px 100px
+    </div>
+    <hr>
+    <div id="d4" class="egg">
+        20px 50px
+        <br>
+        这玩应按顺时针
+        <br>
+        100px 75px
+    </div>
+    <hr>
+    <div id="d5">画圆，50%圆角的正方形=圆<br>(这圆会转)</div>
+    <hr>
+    <div id="d6">长方形就是椭圆喽<br>（他可能是个正圆）</div>
+</body>
+</html>
