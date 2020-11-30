@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>作业1</title>
@@ -8,54 +9,62 @@
         document.write('<p>原题</p>')
         document.write('<img src="../img/1.png" alt="" srcset=""><br>')
         var year = parseInt(prompt('请输入年份'));
-        var month = parseInt(prompt('请输入月份'));
-        switch(month) {
-            case 1:
-                document.write('31天');
-                break;
-            case 2:
-                document.write('2');
-                if((year%4 == 0 && year%100 != 0) || (year%100 == 0)){
-                    document.write(9)
-                } else {
-                    document.write(8)
-                }
-                document.write('天');
-                break;
-            case 3:
-                document.write('31天');
-                break;
-            case 4:
-                document.write('30天');
-                break;
-            case 5:
-                document.write('31天');
-                break;
-            case 6:
-                document.write('30天');
-                break;
-            case 7:
-                document.write('31天');
-                break;
-            case 8:
-                document.write('31天');
-                break;
-            case 9:
-                document.write('30天');
-                break;
-            case 10:
-                document.write('31天');
-                break;
-            case 11:
-                document.write('30天');
-                break;
-            case 12:
-                document.write('31天');
-                break;
+        if (year == 0) {
+            alert('您输入的年份有误，请重试')
+        } else {
+            var month = parseInt(prompt('请输入月份'));
+            switch (month) {
+                case 1:
+                    document.write('31天');
+                    break;
+                case 2:
+                    document.write('2');
+                    if ((year % 4 == 0 && year % 100 != 0) || (year % 100 == 0)) {
+                        document.write(9)
+                    } else {
+                        document.write(8)
+                    }
+                    document.write('天');
+                    break;
+                case 3:
+                    document.write('31天');
+                    break;
+                case 4:
+                    document.write('30天');
+                    break;
+                case 5:
+                    document.write('31天');
+                    break;
+                case 6:
+                    document.write('30天');
+                    break;
+                case 7:
+                    document.write('31天');
+                    break;
+                case 8:
+                    document.write('31天');
+                    break;
+                case 9:
+                    document.write('30天');
+                    break;
+                case 10:
+                    document.write('31天');
+                    break;
+                case 11:
+                    document.write('30天');
+                    break;
+                case 12:
+                    document.write('31天');
+                    break;
+                default:
+                    alert('您输入的月份有误，请重试')
+            }
         }
         document.write("</div>");
     </script>
 </head>
+
 <body>
 </body>
+
 </html>
