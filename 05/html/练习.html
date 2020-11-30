@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        document.write("<div align='center' style='font-size: 30px;'>");
+        // parseInt用于取整
+        // var num = parseInt(prompt(""));
+        // document.write(typeof(num));
+        // document.write(num);
+        // 除以100取整在除以10取余即可取出百位
+        // var num = parseInt(prompt("请输入四位数字"));
+        // document.write(parseInt(num/100)%10)
+        // sex = prompt("输入性别");
+        // s = prompt("输入成绩");
+        // if (s < 10){
+        //     if (sex == "男"){
+        //         document.write("进入男子组");
+        //     } else if (sex == "女"){
+        //         document.write("进入女子组");
+        //     } else {
+        //         document.write("程序出错，请重试");
+        //     }
+        // }else{
+        //     document.write("恭喜出局");
+        // }
+        weather = prompt("请输入天气");
+        day = parseInt(prompt("请输入星期"));
+        temp = prompt("请输入气温");
+        if (day >= 1 && day < 6 ){
+            if (weather == "好") {
+                document.write("谈业务")
+            } else if (weather == "不好") {
+                document.write("查资料")
+            } else {
+                document.write("程序出错，请重试")
+            }
+        } else if (day >= 6 && day < 8){
+            if (temp > 30) {
+                document.write("去游泳");
+            } else {
+                document.write("去爬山")
+            }
+        } else {
+            document.write("您输入的不是星期，请重试")
+        }
+        document.write("</div>");
+    </script>
+</head>
+<body>
+</body>
+</html>
