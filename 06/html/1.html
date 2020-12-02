@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div align='center' style='font-size: 30px;'>
+        要求：<br>
+        输出1-100之间所有的偶数和以及奇数和<br>
+        <script>
+            i = 1
+            odd = 0
+            even = 0
+            while(i<=100){
+                if(i%2 == 0){
+                    even+=i
+               }else{
+                   odd+=i
+               }
+               i++
+            }
+            document.write("偶数和："+even+"<br>");
+            document.write("基数和："+odd+"<br>")
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div align='center' style='font-size: 30px;'>
+        要求：<br>
+        用户登录验证，超过三次提示登录失败<br>
+        <script>
+            i = 3
+            while(i >= 1){
+                user = prompt('请输入用户名')
+                pass = prompt('请输入密码')
+                if (user == 'user' && pass == 'pass'){
+                    alert('登录成功')
+                    break
+                }else{
+                    i--
+                    if (i == 0){
+                        alert('登录失败')
+                    }else{
+                        alert('登录失败，您还剩'+i+'次机会!')
+                    }
+                }
+            }
+            if(i > 1){
+                document.write('登录成功!')
+            }else{
+                document.write('登录失败!')
+            }
+        </script>
+    </div>
+</body>
+</html>

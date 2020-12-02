@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div align='center' style='font-size: 30px;'>
+        要求：<br>
+        使用while实现：输出摄氏温度与华氏温度的对照表，要求它从摄氏温度0度到180度，每隔20度为一项，对照表中的条目不超过10条。<br>
+        转换关系：华氏温度 = 摄氏温度 * 9 / 5.0 + 32<br>
+        提示：<br>
+        循环操作：计算摄氏温度，并输出对照条目<br>
+        循环条件：条目<=10 && 摄氏温度 <=180<br>
+        <script>
+            l = 0
+            c = 0
+            while(l<=10 && c <=180){
+                document.write("摄氏温度:" + c + "华氏温度:" + (c*9/5.0+32) + "<br>")
+                c+=20
+                l++
+            }
+        </script>
+    </div>
+</body>
+</html>
