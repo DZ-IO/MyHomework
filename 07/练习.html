@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        document.write("<div align='center' style='font-size: 30px;'>");
+
+        // var i = 10
+
+        // do{
+        //     alert(i)
+        //     i--
+        //     alert(i)
+        // }while(i<=5)
+
+        var rand = parseInt(Math.random()*10)
+        console.log(rand)
+        do{
+            var num = parseInt(prompt("请输入一个随机数"))
+            if(num>rand){
+                alert("您猜大了")
+            }else if(num<rand){
+                alert("您猜小了")
+            }
+        }while(num!=rand)
+        alert("恭喜您猜对了")
+        
+        document.write("</div>");
+    </script>
+</head>
+<body>
+</body>
+</html>
