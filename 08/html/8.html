@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <div align='center' style='font-size: 30px;'>
+        要求：<br>
+        <img src="../img/8.jpg" alt=""><br> 提示：先写出单个学生平均分的计算程序，然后再写出若干个学生平均分的计算程序
+        <br>
+        <script>
+            // 若干个学生的平均分计算程序
+            for (;;) {
+                // 单个学生平均分的计算程序
+                name = prompt('输入学生姓名')
+                document.write('学生姓名' + name + '<br>')
+                all = 0
+                for (i = 1; i <= 5; i++) {
+                    score = parseFloat(prompt('请输入第' + i + '门课成绩'))
+                    document.write('第' + i + '门课成绩:' + score + '<br>')
+                    all += score
+                }
+                document.write(name + '的平均分:' + (all / 5) + '<br>')
+                if (prompt('继续输入吗（y继续）') != y) {
+                    break
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>

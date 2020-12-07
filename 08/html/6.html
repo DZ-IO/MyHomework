@@ -8,18 +8,17 @@
     <div align='center' style='font-size: 30px;'>
         要求：<br>
         循环输入某同学第一学期结业考试的5门课成绩，弹出最高分以及总分<br>
+        <img src="../img/6.png" alt=""><br>
         <script>
-            i = 1
             all = 0
             his = 0
-            while(i<=5){
+            for(i=1;i<=5;i++){
                 score = parseFloat(prompt('请输入第'+i+'门课成绩'))
                 document.write('第'+i+'门课成绩:'+score+'<br>')
                 all = score+all
                 if(his<score){
                     his = score
                 }
-                i++
             }
             document.write('最高分:'+his+'<br>')
             document.write('总分:'+all)
