@@ -1,7 +1,7 @@
 l = 8;
 dest = "08";
 i = 1;
-document.write('<a href="https://github.com/daze456/MyHomework/blob/main/' + dest + '/homework.md">作业列表</a>&nbsp;');
+//document.write('<a href="https://github.com/daze456/MyHomework/blob/main/' + dest + '/homework.md">作业列表</a>&nbsp;');
 document.write('<a href="https://github.com/daze456/MyHomework/tree/main/' + dest + '">代码列表</a>');
 document.write("<ol>");
 while (i <= l) {
