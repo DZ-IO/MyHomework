@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <div align='center' style='font-size: 30px;'>
+        要求：<br> 输入五位学生的考试成绩，求最高分<br>
+        <script>
+            var score = Array(5)
+            for (n = 0; n < score.length; n++) {
+                score[n] = parseFloat(prompt('输入第' + (n + 1) + '名学生的成绩'))
+            }
+            all = 0
+            for (n = 0; n < score.length; n++) {
+                document.write('第' + (n + 1) + '名学生的成绩为' + (score[n]) + '<br>')
+                all += score[n]
+            }
+            document.write('所有学生的成绩为' + all)
+        </script>
+    </div>
+</body>
+
+</html>

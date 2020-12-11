@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <div align='center' style='font-size: 30px;'>
+        要求：<br> 将一组乱序字母排序，进行升序和逆序输出<br>
+        <script>
+            var l = Array(5)
+            for (n = 0; n < l.length; n++) {
+                l[n] = prompt('输入第' + (n + 1) + '个字母')
+            }
+            l.sort()
+            document.write('升序')
+            for (n = 0; n < l.length; n++) {
+                document.write(l[n] + '&nbsp;')
+            }
+            document.write('<br>降序')
+            for (n = l.length - 1; n >= 0; n--) {
+                document.write(l[n] + '&nbsp;')
+            }
+        </script>
+    </div>
+</body>
+
+</html>

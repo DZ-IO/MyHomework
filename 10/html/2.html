@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <div align='center' style='font-size: 30px;'>
+        要求：<br> 求出4家店的最低价格<br>
+        <script>
+            var cost = Array(4)
+            for (n = 0; n < cost.length; n++) {
+                cost[n] = parseFloat(prompt('输入第' + (n + 1) + '家店的价格'))
+            }
+            cost.sort()
+            document.write('最低价格为' + cost[0])
+        </script>
+    </div>
+</body>
+
+</html>

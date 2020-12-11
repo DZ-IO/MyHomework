@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <div align='center' style='font-size: 30px;'>
+        要求：<br> 数组存储5笔购物金额，输出总金额<br>
+        <script>
+            var m = Array(5)
+            for (n = 0; n < m.length; n++) {
+                m[n] = parseFloat(prompt('输入第' + (n + 1) + '笔购物金额'))
+            }
+            all = 0
+            for (n = 0; n < m.length; n++) {
+                document.write('第' + (n + 1) + '笔购物金额为' + (m[n]) + '<br>')
+                all += m[n]
+            }
+            document.write('总金额为' + all)
+        </script>
+    </div>
+</body>
+
+</html>
