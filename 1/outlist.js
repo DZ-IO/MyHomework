@@ -1,5 +1,5 @@
 l = 4;
-dest = "10";
+dest = "1";
 i = 1;
 document.write('<a href="https://github.com/daze456/MyHomework/blob/main/' + dest + '/homework.md">作业列表</a>&nbsp;');
 document.write('<a href="https://github.com/daze456/MyHomework/tree/main/' + dest + '">代码列表</a>');
