@@ -1,6 +1,6 @@
-c = 1
+c = 2
 for (i = 1; i <= c; i++) {
     document.write('<li>')
-    document.write('<p id=' + i + '>day' + i + '<p/>')
+    document.write('<a name=' + i + '>day' + i + '<a/>')
     document.write('<script src="./' + i + '/outlist.js"></script>')
 }
