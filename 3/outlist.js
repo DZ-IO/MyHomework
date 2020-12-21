@@ -1,0 +1,1 @@
+document.write('Day03 无作业');

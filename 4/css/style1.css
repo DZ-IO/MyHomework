@@ -1,0 +1,15 @@
+h1 {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 楷体;
+}
+
+.l {
+    color: red;
+}
+
+p {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: 'Times New Roman', Times, 宋体;
+}

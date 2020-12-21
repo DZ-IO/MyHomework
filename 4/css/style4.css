@@ -1,0 +1,19 @@
+h2 {
+    background-color: #518600;
+}
+
+body {
+    background-color: #F9FBD4;
+}
+
+ul {
+    list-style: none;
+}
+
+a[href] {
+    text-decoration: none;
+}
+
+a[href]:hover {
+    text-decoration: underline;
+}
