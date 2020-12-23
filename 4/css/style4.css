@@ -1,8 +1,10 @@
 h2 {
     background-color: #518600;
+    color: white;
 }
 
-body {
+div {
+    width: 500px;
     background-color: #F9FBD4;
 }
 
