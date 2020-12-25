@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day06浮动作业</title>
+    <link rel="stylesheet" href="/css/public.css">
+    <style>
+        #container {
+            width: 1268px;
+            height: 858px;
+        }
+        
+        #head {
+            height: 208px;
+        }
+        
+        #head #logo {
+            margin-top: 46px;
+            margin-left: 16px;
+            display: inline-block;
+        }
+        
+        #head #center {
+            border: #0099cc 2px solid;
+            height: 50px;
+            width: 548px;
+            margin: 52px 121px;
+        }
+        
+        #head * {
+            height: 50px;
+            float: left;
+        }
+        
+        #head select {
+            width: 92px;
+        }
+        
+        #head input[placeholder] {
+            width: 366px;
+            height: 46px;
+        }
+        
+        .searchbtn button {
+            background: #09c;
+            border: 0;
+            width: 86px;
+        }
+        
+        #upload {
+            margin: 52px 39px;
+        }
+        
+        #nav {
+            height: 50px;
+        }
+        
+        #nav li {
+            list-style: none;
+            line-height: 50px;
+            border-right: #0184B0 solid 1px;
+            padding: 0 39px;
+            background-color: #0099cc;
+        }
+        
+        #nav li:last-of-type {
+            border-right: none;
+            padding: 0 41px;
+        }
+        
+        #nav li a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        #nav li:hover {
+            background-color: #0184B0;
+        }
+        
+        #main {
+            height: 650px;
+        }
+        
+        #main>* {
+            float: left;
+            height: 264px;
+        }
+        
+        #main #left #banner {
+            margin: 27px 12px 20px;
+        }
+        
+        #main #left #bottom {
+            width: 418px;
+            margin: 0px 12px;
+        }
+        
+        #bottom .nav {
+            height: 37px;
+            border: #ccc 1px solid;
+            line-height: 37px;
+        }
+        
+        #center .nav {
+            height: 37px;
+            border: #ccc 1px solid;
+            line-height: 37px;
+        }
+        
+        .nav div {
+            padding-left: 15px;
+            box-sizing: border-box;
+            height: 37px;
+        }
+        
+        #bottom .nav #nav {
+            background-color: #0099CC;
+            color: white;
+            height: 37px;
+            width: 100px;
+        }
+        
+        #left_internal {
+            height: 237px;
+            border: #ccc 1px solid;
+        }
+        
+        #left_internal li {
+            list-style: none;
+            float: left;
+            padding: 6px 13px;
+            border: 1px solid #dadada;
+            margin: 5px;
+            border-radius: 7%;
+        }
+        
+        #left_internal li a {
+            text-decoration: none;
+            color: #000;
+        }
+        
+        #main #center,
+        #main #right {
+            width: 413px;
+        }
+        
+        .detail {
+            border: #ccc 1px solid;
+            line-height: 37px;
+        }
+        
+        #right>* {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+        
+        .top .nav:first-of-type {
+            margin-top: 13px;
+        }
+        
+        #right .nav {
+            border-top: 1px solid rgba(0, 0, 0, 0);
+            border-bottom: 1px solid #ccc;
+        }
+        
+        #right .detail {
+            border: none;
+        }
+        
+        .detail a {
+            color: black;
+            text-decoration: none;
+        }
+        
+        .detail li {
+            list-style: none;
+            margin-left: 23px;
+        }
+        
+        #right .detail li {
+            list-style-type: square;
+        }
+    </style>
+</head>
+
+<body>
+    <span>需求</span><br><img src="../img/1.png" alt=""><br>
+    <span>结果</span><br>
+    <div id="container">
+        <div id="head">
+            <div id="logo">
+                <img src="../img/logo.png" alt="">
+            </div>
+            <form action="" method="get">
+                <div id="center">
+                    <select name="" id="">
+                        <option value="">文章</option>
+                    </select>
+                    <input type="text" placeholder="输入关键字">
+                    <div class="searchbtn">
+                        <button id="searchbtn" type="submit">搜索</button>
+                    </div>
+                </div>
+            </form>
+            <div id="upload">
+                <img src="../img/upload.jpg" alt="">
+            </div>
+            <div id="nav">
+                <ul>
+                    <li><a href="">首页</a></li>
+                    <li><a href="">前端文章</a></li>
+                    <li><a href="">前端入门</a></li>
+                    <li><a href="">CSS教程</a></li>
+                    <li><a href="">JavaScript教程</a></li>
+                    <li><a href="">前端框架</a></li>
+                    <li><a href="">前端问答</a></li>
+                    <li><a href="">资料分享</a></li>
+                    <li><a href="">关于</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div id="left">
+                <div id="banner">
+                    <img src="../img/2.png" alt="">
+                </div>
+                <div id="bottom">
+                    <div class="nav">
+                        <div id="nav">前端开发</div>
+                    </div>
+                    <div id="left_internal">
+                        <ul>
+                            <li><a href="">前端书籍</a></li>
+                            <li><a href="">angularjs</a></li>
+                            <li><a href="">SEO</a></li>
+                            <li><a href="">工具软件</a></li>
+                            <li><a href="">jquery</a></li>
+                            <li><a href="">CSS3</a></li>
+                            <li><a href="">HTML5</a></li>
+                            <li><a href="">bootstrap</a></li>
+                            <li><a href="">源码分享</a></li>
+                            <li><a href="">前端面试</a></li>
+                            <li><a href="">微信小程序</a></li>
+                            <li><a href="">reactjs</a></li>
+                            <li><a href="">node.js</a></li>
+                            <li><a href="">vue.js</a></li>
+                            <li><a href="">前端周边</a></li>
+                            <li><a href="">视频教程</a></li>
+                            <li><a href="">文档教程</a></li>
+                            <li><a href="">html</a></li>
+                            <li><a href="">CSS</a></li>
+                            <li><a href="">JavaScript</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="center">
+                <div class="top">
+                    <div class="nav">
+                        <div>特别推荐</div>
+                    </div>
+                    <div class="detail">
+                        <ul>
+                            <li><a href="">-前端面试终于过了一家，入职5天就被劝退了!</a></li>
+                            <li><a href="">-我做前端这12年来的感悟</a></li>
+                            <li><a href="">-妈妈再也不用担心我不会webpack了</a></li>
+                            <li><a href="">-html基础知识--前端入「教程</a></li>
+                            <li><a href="">-javascript是什么? --- javaScript入门笔记</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="nav">
+                        <div>最近更新</div>
+                    </div>
+                    <div class="detail">
+                        <ul>
+                            <li><a href="">-前端面试终于过了一家，入职5天就被劝退了!</a></li>
+                            <li><a href="">-我做前端这12年来的感悟</a></li>
+                            <li><a href="">--前端重磅: Vue.js 3.0终于来了,作者已公布源码!</a></li>
+                            <li><a href="">一个前端开发学习神器，帮你解决你遇到的所有前端...</a></li>
+                            <li><a href="">-全面改革:解读Vue.js 3.0的变化</a></li>
+                            <li><a href="">-自学编程怎么入门?很多新人的做法都错了</a></li>
+                            <li><a href="">-2018年腾讯前端一面总结(面向2019届学生)</a></li>
+                            <li><a href="">-前端简洁并实用的工具类函数封装</a></li>
+                            <li><a href="">-这是新手自学编程的开始，程序员入门的好技巧，你...</a></li>
+                            <li><a href="">-研究人员称HTML5可以被用来追踪网民</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="right">
+                <div class="top">
+                    <div class="nav">
+                        <div>前端问答社区</div>
+                    </div>
+                    <div class="detail">
+                        <ul>
+                            <li><a href="">我做前端这12年来的感悟!</a></li>
+                            <li><a href="">一个前端开发学习神器，帮你解决你遇到的所有..</a></li>
+                            <li><a href="">自学编程怎么入门?很多新人的做法都错了</a></li>
+                            <li><a href="">这是新手自学编程的开始，程序员入门门的好技巧...</a></li>
+                            <li><a href="">westrom怎么传代码到SVN和Github</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="nav">
+                        <div>CSS教程</div>
+                    </div>
+                    <div class="detail">
+                        <ul>
+                            <li><a href="">CSS链接</a></li>
+                            <li><a href="">CSS字体</a></li>
+                            <li><a href="">CSS文本</a></li>
+                            <li><a href="">前端CSS样式教程之背景</a></li>
+                            <li><a href="">如何创建CSS</a></li>
+                            <li><a href="">CSS属性选择器</a></li>
+                            <li><a href="">CSS类选择器</a></li>
+                            <li><a href="">CSS id选择器</a></li>
+                            <li><a href="">CSS派生选择器</a></li>
+                            <li><a href="">CSS 高级语法</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
