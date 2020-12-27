@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, "宋体";
+        }
+        
+        #container {
+            width: 1200px;
+            margin: 12px auto;
+        }
+        
+        #top {
+            height: 48px;
+        }
+        
+        #logo {
+            float: left;
+        }
+        
+        #top #right {
+            float: right;
+        }
+        
+        #top #right .int {
+            background-color: #EAFFFA;
+            line-height: 15px;
+            float: left;
+            padding: 6px;
+        }
+        
+        #top #right #count {
+            top: 10px;
+            position: relative;
+        }
+        
+        #container .nav {
+            clear: both;
+            margin: 10px 0;
+        }
+        
+        #container .nav ul li {
+            list-style: none;
+            height: 24px;
+            background-color: #FE6815;
+            float: left;
+            line-height: 24px;
+            padding: 3px 19px;
+        }
+        
+        #container .nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        #container .nav ul li a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        #container .nav ul li:last-of-type {
+            padding-right: 45px;
+        }
+        
+        #container #banner img {
+            width: 100%;
+            margin: 12px 0;
+        }
+        
+        #container #main {
+            background-color: #fff;
+            float: left;
+        }
+        
+        #container #main #main_top {
+            position: relative;
+            top: 59px;
+            left: -10px;
+        }
+        
+        #container #main #books {
+            padding-top: 70px;
+            border: #D6E4C6 3px solid;
+            float: left;
+        }
+        
+        #container #main #books>div {
+            float: left;
+        }
+        
+        #container #main #books>div .position {
+            top: 49px;
+            left: 21px;
+        }
+        
+        #container #main #books>#n01 {
+            width: 66%;
+        }
+        
+        .book_img img {
+            float: left;
+        }
+        
+        .detail {
+            float: left;
+            width: 67%;
+        }
+        
+        #container #main #books>#nOther {
+            width: 32%;
+        }
+        
+        #container #main #books>div>div .position {
+            top: 34px;
+            left: 0px;
+        }
+        
+        .position {
+            position: relative;
+        }
+        
+        #bottom {
+            text-align: center;
+            height: 66px;
+            line-height: 66px;
+            clear: both;
+            color: #666;
+        }
+        
+        #main .cost {
+            color: #68272F;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="top">
+            <div id="logo">
+                <img src="../img/logo.jpg" alt="">
+            </div>
+            <div id="right">
+                <div id="count">
+                    <img src="../img/icon_count.png" alt="">
+                </div>
+                <div class="int">
+                    <span>尾品汇</span>
+                </div>
+                <div class="int">
+                    <span>当当优品</span>
+                </div>
+                <div class="int">
+                    <span>数字馆</span>
+                </div>
+                <div class="int">
+                    <span>都看阅器</span>
+                </div>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><a href="">图书</a></li>
+                <li><a href="">音像</a></li>
+                <li><a href="">童装</a></li>
+                <li><a href="">服装</a></li>
+                <li><a href="">鞋靴</a></li>
+                <li><a href="">运动</a></li>
+                <li><a href="">箱包</a></li>
+                <li><a href="">美妆</a></li>
+                <li><a href="">珠宝</a></li>
+                <li><a href="">家居</a></li>
+                <li><a href="">食品</a></li>
+                <li><a href="">酒</a></li>
+                <li><a href="">手机</a></li>
+                <li><a href="">数码</a></li>
+                <li><a href="">电脑</a></li>
+                <li><a href="">家电</a></li>
+            </ul>
+        </div>
+        <div id="banner">
+            <img src="../img/banner.png" alt="">
+        </div>
+        <div id="main">
+            <div id="main_top">
+                <img src="../img/bg_bang.gif" alt="">
+            </div>
+            <div id="books">
+                <div id="n01">
+                    <div class="position">
+                        <img src="../img/bookNo1.gif" alt="">
+                    </div>
+                    <div class="book_img">
+                        <img src="../img/book-01.jpg" alt="">
+                    </div>
+                    <div class="detail">
+                        <h2><a href="">偷影子的人</a></h2>
+                        <p>作者: [法]马克.李维(Marc Levy)著,段韵灵 译</p>
+                        <p>出版社:湖南文艺出版社</p>
+                        <p>当当价:<span class="cost">￥ 17.90</span></p>
+                        <p>不知道姓氏的克蕾儿。这就是你在我生命里的角色，我童年时的小女孩，今日蜕变成了女人，一段青梅竹马的回忆，-个时间之神没有应允的愿望。一个老是受班上同学欺负的瘦弱小男孩，因为拥有一种特殊能力而强大:他能偷别人的影子”，因而能看见他</p>
+                    </div>
+                </div>
+                <div id="nOther">
+                    <div id="n02">
+                        <div class="position">
+                            <img src="../img/bookNo2.gif" alt="">
+                        </div>
+                        <div class="book_img">
+                            <img src="../img/book-02.jpg" alt="">
+                        </div>
+                        <div class="detail">
+                            <p><a href="">看见(央视知名记者、主持人柴静:十年个人成长的告白，中国社会变迁的备忘</a></p>
+                            <p>作者:柴静著</p>
+                            <p>出版社:广西师范大学出版社</p>
+                            <p><span class="cost">￥29.40</span> 7.4折</p>
+                        </div>
+                    </div>
+                    <div id="n03">
+                        <div class="position">
+                            <img src="../img/bookNo3.gif" alt="">
+                        </div>
+                        <div class="book_img">
+                            <img src="../img/book-03.jpg" alt="">
+                        </div>
+                        <div class="detail">
+                            <p><a href="">改变孩子先改变自己</a></p>
+                            <p>作者:贾容韬 贾毅 著</p>
+                            <p>出版社:作家出版社</p>
+                            <p><span class="cost">￥22.20</span> 7.4折</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="bottom">
+            <p>Copyright (C)当当网2004-2017, All Rights Reserved<img src="../img/validate.gif" alt="">京ICP证041189号出版物经营许可证 新出发京批字第直0673号</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-c = 6
+c = 7
 for (i = 1; i <= c; i++) {
     document.write('<li>')
     document.write('<a name=' + i + '>day' + i + '<a/>')
