@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes a01 {
+            0% {
+                transform: translate(0px, 0px);
+            }
+            50% {
+                transform: translate(100px, 0px) rotate(180deg);
+            }
+            100% {
+                transform: translate(100px, 100px) rotate(0deg);
+            }
+        }
+        
+        .item {
+            height: 100px;
+            width: 100px;
+            background: black;
+            animation: a01 3s;
+        }
+        
+        button {
+            transition: transform 1s;
+        }
+        
+        button:not(:hover) {
+            transform: scale(2.0);
+        }
+    </style>
+</head>
+
+<body>
+    <button>test</button>
+</body>
+
+</html>

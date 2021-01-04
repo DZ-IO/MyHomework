@@ -1,0 +1,140 @@
+@keyframes balloon {
+    0% {
+        left: 97%;
+        transform: rotate(0deg);
+    }
+    25% {
+        left: 74%;
+        transform: rotate(25deg);
+    }
+    50% {
+        left: 36%;
+        transform: rotate(56deg);
+    }
+    75% {
+        left: 19%;
+        transform: rotate(24deg);
+    }
+    100% {
+        left: -6%;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes bg {
+    0% {
+        background-color: #000538;
+    }
+    25% {
+        background-color: #0979CF;
+    }
+    50% {
+        background-color: #375361;
+    }
+    75% {
+        background-color: #B6966D;
+    }
+    100% {
+        background-color: #FF2C0C;
+    }
+}
+
+.box {
+    height: 465px;
+    background-color: #000538;
+    animation: bg 20s infinite alternate;
+}
+
+.layer0 {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 21%;
+    z-index: 0;
+}
+
+.layer1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30%;
+    background: url('../img/skyline.png');
+    height: 147px;
+    width: 100%;
+    z-index: 1;
+}
+
+.layer2 {
+    position: absolute;
+    z-index: 2;
+    top: 4%;
+    left: 97%;
+    transform: rotate(0deg);
+    animation: balloon 20s infinite alternate;
+}
+
+.layer3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 34%;
+    background: url('../img/groundBack.png');
+    height: 281px;
+    width: 100%;
+    z-index: 3;
+}
+
+.layer4 {
+    position: absolute;
+    margin: 0 auto;
+    left: 38%;
+    top: 20%;
+    z-index: 4;
+}
+
+.layer5 {
+    position: absolute;
+    margin: 0 auto;
+    left: 6%;
+    top: 27%;
+    z-index: 5;
+}
+
+.layer6 {
+    position: absolute;
+    margin: 0 auto;
+    right: 8%;
+    top: 24%;
+    z-index: 6;
+}
+
+.layer7 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 34%;
+    background: url('../img/groundMid.png');
+    height: 281px;
+    width: 100%;
+    z-index: 7;
+}
+
+.layer8 {
+    position: absolute;
+    margin: 0 auto;
+    left: 21%;
+    top: 17%;
+    z-index: 8;
+}
+
+.layer9 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 34%;
+    background: url('../img/groundFront.png');
+    height: 281px;
+    width: 100%;
+    z-index: 9;
+}

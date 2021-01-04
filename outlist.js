@@ -1,4 +1,4 @@
-c = 8
+c = 11
 for (i = 1; i <= c; i++) {
     document.write('<li>')
     document.write('<a name=' + i + '>day' + i + '<a/>')
