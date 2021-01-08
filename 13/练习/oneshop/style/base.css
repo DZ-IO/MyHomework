@@ -1,0 +1,45 @@
+/* 基础样式 */
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+span {
+    font-size: 12px;
+    line-height: 15px;
+    color: #555;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+a:hover {
+    color: orange;
+}
+
+main {
+    clear: both;
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}

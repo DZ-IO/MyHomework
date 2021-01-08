@@ -1,0 +1,262 @@
+/* 顶部导航 */
+
+.top {
+    width: 100%;
+    height: 35px;
+    background-image: linear-gradient(to bottom, #d1d1d1, #f4f4f4, #f5f5f5);
+}
+
+.top>.left {
+    float: left;
+    margin-top: 10px;
+    margin-left: 35px;
+}
+
+.top>.right {
+    float: right;
+    margin-top: 10px;
+    margin-right: 35px;
+}
+
+.top>.right>span {
+    margin-left: 10px;
+}
+
+.top>.right>img {
+    vertical-align: middle;
+}
+
+
+/* banner样式 */
+
+.bottom {
+    width: 100%;
+    height: auto;
+}
+
+.bottom>.left {
+    float: left;
+    padding-left: 70px;
+    padding-top: 50px;
+}
+
+.bottom>.center {
+    float: left;
+    padding-left: 70px;
+    padding-top: 50px;
+}
+
+.bottom>.center>.txt {
+    display: inline-block;
+    padding: 0px;
+}
+
+.bottom>.center>.txt>input[type='text'] {
+    float: left;
+    width: 500px;
+    height: 40px;
+    border: 1px solid red;
+    line-height: 15px;
+    outline: none;
+}
+
+.bottom>.center>.txt>input[type='submit'] {
+    float: left;
+    margin-left: 0px;
+    outline: none;
+    font-size: 18px;
+    height: 44px;
+    background-color: red;
+}
+
+.bottom>.center>.label {
+    margin-top: 5px;
+}
+
+.bottom>.center>.label>a {
+    margin: 3px;
+}
+
+.bottom>.right {
+    float: left;
+}
+
+.bottom>.right>.btncar {
+    margin-left: 70px;
+    margin-top: 46px;
+    width: 150px;
+    height: 47px;
+    border: 1px solid #777;
+    background-color: #ccc
+}
+
+.bottom>.right>.btncar>img {
+    float: left;
+    margin: 15px 0px 0px 27px;
+}
+
+.bottom>.right>.btncar>span {
+    float: left;
+    font-size: 18px;
+    margin: 15px 0px 0px 9px;
+}
+
+
+/* 版心样式 */
+
+main {
+    width: 1361px;
+}
+
+
+/* 顶部导航样式 */
+
+.banner>nav {
+    border-bottom: #FF3C3C 2px solid;
+    height: 50px;
+}
+
+.banner>nav:first-of-type>ul>li {
+    float: left;
+    line-height: 50px;
+    padding: 0px 30px 0px 10px;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.banner>nav:first-of-type>ul>li:first-of-type {
+    background-color: #FF3C3C;
+    padding-right: 108px;
+    padding-left: 33px;
+    color: white;
+}
+
+.banner>nav:first-of-type>ul>li:nth-of-type(2),
+.banner>nav:first-of-type>ul>li:nth-of-type(3) {
+    color: #FF3C3C;
+}
+
+.banner>nav:first-of-type>ul>li:last-of-type {
+    float: right;
+}
+
+
+/* banner版心样式 */
+
+.banner>.banner-main {
+    clear: both;
+}
+
+
+/* 左侧导航样式 */
+
+.banner>.banner-main>nav {
+    width: 267px;
+    float: left;
+}
+
+.banner>.banner-main>nav>ul>li {
+    background-color: #B01D1D;
+    padding: 10px 12px;
+}
+
+.banner>.banner-main>nav * {
+    color: #fff;
+    font-size: 16px;
+}
+
+.banner>.banner-main>nav>ul>li:nth-of-type(5)>img {
+    margin: 4px 5px 0px;
+}
+
+
+/* banner图样式 */
+
+.banner>.banner-main>.bannerpic {
+    float: left;
+    position: relative;
+}
+
+.banner>.banner-main>.bannerpic>img {
+    height: 378px;
+}
+
+.banner>.banner-main>.bannerpic>img:first-of-type {
+    position: absolute;
+    height: 100px;
+    top: 34%;
+    left: 0;
+}
+
+.banner>.banner-main>.bannerpic>img:last-of-type {
+    position: absolute;
+    height: 100px;
+    top: 34%;
+    right: 0;
+}
+
+.banner>.banner-main>.bannerpic>.bannerpics {
+    position: absolute;
+    height: 100px;
+    top: 92%;
+    right: 50%;
+}
+
+.banner>.banner-main>.bannerpic>.bannerpics>div {
+    float: left;
+    background-image: url(../images/b.png);
+    height: 15px;
+    width: 15px;
+    text-align: center;
+    margin: 2px;
+}
+
+
+/* banner右侧上部样式 */
+
+.banner>.banner-main>.bannerright>.bannerrt {
+    padding: 6px 1px 0px;
+    border-left: 1px solid #ccc;
+}
+
+.banner>.banner-main>.bannerright>.bannerrt>nav {
+    height: 26px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #ccc;
+}
+
+.banner>.banner-main>.bannerright>.bannerrt>ul {
+    clear: both;
+}
+
+.banner>.banner-main>.bannerright>.bannerrt>ul li {
+    line-height: 32px;
+    font-size: 16px;
+}
+
+.banner>.banner-main>.bannerright>.bannerrt>ul a {
+    clear: both;
+}
+
+
+/* banner右侧下部样式 */
+
+.banner>.banner-main>.bannerright>.bannerrb {
+    padding: 6px 1px 0px;
+    border-left: 1px solid #ccc;
+}
+
+.banner>.banner-main>.bannerright>.bannerrb>nav {
+    height: 26px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #ccc;
+}
+
+.banner>.banner-main>.bannerright>.bannerrb>p {
+    padding: 3px;
+}
+
+.banner>.banner-main>.bannerright>.bannerrb>img {
+    padding: 3px;
+    width: 240px;
+}
