@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 定义三角形的上限
+        var nums = 10
+        for (i = 1; i <= nums; i++) {
+            for (l = nums; l > i; l--) {
+                document.write('0')
+            }
+            for (j = 1; j <= i * 2 - 1; j++) {
+                document.write('1')
+            }
+            document.write('<br>')
+        }
+    </script>
+</body>
+
+</html>

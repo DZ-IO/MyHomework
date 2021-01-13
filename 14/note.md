@@ -1,4 +1,4 @@
-# js
+# js 基础、条件判断与循环
 ```js
     // var 变量修饰符 告诉编译器马上声明变量
 
@@ -63,4 +63,16 @@
     num1 = parseInt(num1)
     // 转换浮点型
     num1 = parseFloat(num1)
+
+    // while循环
+    var i = 0;
+    while (i < 10) {
+        console.log('当前的i值：' + i)
+        i++
+    }
+
+    // for循环
+    for(var i = 0;i < 10;i++){
+        console.log('当前的i值：' + i)
+    }
 ```

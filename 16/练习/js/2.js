@@ -1,0 +1,66 @@
+// 运算符
+// 算数运算符
+document.write('1+1=' + (1 + 1))
+document.write('<br>')
+document.write('1-1=' + (1 - 1))
+document.write('<br>')
+document.write('10*3=' + (10 * 3))
+document.write('<br>')
+document.write('10/3=' + (10 / 3))
+document.write('<br>')
+document.write('10%3=' + (10 % 3))
+document.write('<br>')
+
+a = 1
+document.write('++a=' + ++a)
+document.write('<br>')
+document.write('--a=' + --a)
+document.write('<br>')
+document.write('a++=' + a++)
+document.write('<br>')
+document.write('a--=' + a--)
+document.write('<br>')
+
+// 逻辑运算符
+var x = 10
+var y = 100
+var z = '100'
+document.write('x>y:' + x > y)
+document.write('<br>')
+document.write('x>y:' + x > y)
+document.write('<br>')
+document.write('x<=y:' + x <= y)
+document.write('<br>')
+document.write('x>=y:' + x >= y)
+document.write('<br>')
+document.write('x!=y:' + x != y)
+document.write('<br>')
+document.write('x==y:' + x == y)
+document.write('<br>')
+document.write('z==y:' + z == y)
+document.write('<br>')
+document.write('z===y:' + z === y)
+document.write('<br>')
+document.write('z!=y:' + z != y)
+document.write('<br>')
+document.write('z!==y:' + z !== y)
+document.write('<br>')
+
+document.write('true&&true:' + true && true)
+document.write('<br>')
+document.write('true&&false:' + true && false)
+document.write('<br>')
+document.write('false&&false:' + false && false)
+document.write('<br>')
+
+document.write('true||true:' + true || true)
+document.write('<br>')
+document.write('true||false:' + true || false)
+document.write('<br>')
+document.write('false||false:' + false || false)
+document.write('<br>')
+
+document.write('!true:' + !true)
+document.write('<br>')
+document.write('!false:' + !false)
+document.write('<br>')
