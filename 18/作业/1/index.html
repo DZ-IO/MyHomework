@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业1</title>
+    <script>
+        var x = 0;
+        while (x <= 7) {
+            if ((1 / 6) * x + (7 - x) * (1 / 10) == 1) {
+                document.write('甲打字用了：' + x + '小时');
+            }
+            x += 0.1;
+            // 踩坑记录：精度问题
+        }
+    </script>
+</head>
+
+<body>
+    <p>一份稿件，甲单独打字需6小时完成.乙单独打字需10小时完成，甲单独打若干小时后，因有事由乙接着打完，共用了7小时。甲打字用了多少小时？</p>
+</body>
+
+</html>

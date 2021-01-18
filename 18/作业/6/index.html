@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业6</title>
+</head>
+
+<body>
+    <p>求出1~10000之间的全部同构数.</p>
+    <p>同构数指一个数出现在它的平方的右端.</p>
+    <p>如:5的平方是25,5是25右端的数,5和25就是一对同构数.</p>
+    <script>
+        var i = 0;
+        while (i <= 10000) {
+            j = 10000;
+            while (j >= 1) {
+                if (i <= j) {
+                    if ((i * i) % j == i) {
+                        document.write('<p>' + i + '</p>');
+                        break;
+                    }
+                }
+                j = j / 10
+            }
+            i++
+        }
+    </script>
+</body>
+
+</html>

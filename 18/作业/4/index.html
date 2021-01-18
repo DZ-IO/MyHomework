@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>一辆以固定速度行驶的汽车,清晨司机看到里程表上从左到右的读数和从右到左的计数是一样的,这个数是95859,2小时后,里程表上又出现一个新的对称数,问此车的时速是多少?这个新的对称数是什么?设里程表为5位数字.</p>
+    <script>
+        var i = 1;
+        while (i <= 250) {
+            // 两小时后里程
+            var sum = 95859 + 2 * i;
+            if (sum % 10 == parseInt(sum / 10000) % 10 && parseInt(sum / 1000) % 10 == parseInt(sum / 10) % 10) {
+                document.write('速度为' + i + 'km/h,里程为' + sum + '<br>')
+            }
+            i++;
+        }
+    </script>
+    <!-- 踩坑记录，不能循环里程，因为有多种结果 -->
+</body>
+
+</html>

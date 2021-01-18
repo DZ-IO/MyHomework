@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业3</title>
+    <script>
+        var yi = 0;
+        while (yi <= 400) {
+            var jia = 10 + yi;
+            if (4 * jia + 5 * yi == 400) {
+                document.write('甲队每天修' + jia + '米，乙队每天修' + yi + '米');
+            }
+            yi++;
+            // 踩坑记录：追求超高精度会出问题
+        }
+    </script>
+</head>
+
+<body>
+    <p>甲、乙两队共同修一条长400米的公路，甲队从东往西修4天，乙队从西往东修5天，正好修完，甲队比乙队每天多修10米。甲、乙两队每天共修多少米</p>
+</body>
+
+</html>
