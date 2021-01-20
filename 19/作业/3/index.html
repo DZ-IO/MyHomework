@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业3</title>
+    <script>
+        document.write('原式为：')
+        for (var i = 0; i <= 9; i++) {
+            if (i == 1) {
+                continue;
+            }
+            for (var j = 0; j <= 9; j++) {
+                for (var k = 0; k <= 9; k++) {
+                    for (var l = 0; l <= 9; l++) {
+                        for (var m = 0; m <= 9; m++) {
+                            if (i * (j * 10 + 3 + k) * i * (j * 10 + 3 + k) == 8 * 1000 + l * 100 + m * 10 + 9) {
+                                document.write('[' + i + '×(' + j + '3+' + k + ')]<sup>2</sup>=8' + l + '' + m + '9')
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
