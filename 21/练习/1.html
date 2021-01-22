@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function chek() {
+            var flag = true
+            var password = new String(document.getElementById('form').password.value)
+            if (password.length < 6) {
+                alert('密码长度不合法')
+                flag = false
+            }
+            var fileName = new String(document.getElementById('form').fileName.value)
+            var index = fileName.indexOf('.')
+            if (index < 0 || fileName.substring(index) != '.html') {
+                alert('作业格式不合法')
+                flag = false
+            }
+            var email = new String(document.getElementById('form').email.value)
+            index1 = email.indexOf('@')
+            index2 = email.indexOf('.')
+            if (index1 < 0 || index2 < 0 || index1 > index2) {
+                alert('邮箱地址不合法')
+                flag = false
+            }
+            if (flag) {
+                alert('提交成功')
+            } else {
+                alert('提交失败')
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <form action="" method="post" id="form">
+        <input type="password" name="password" placeholder="输入密码（至少6位）">
+        <input type="text" name="filename" placeholder="输入文件名（以html结尾）">
+        <input type="text" name="email" placeholder="输入邮箱（包含@和.）">
+        <input type="button" value="提交" onclick="chek()">
+    </form>
+</body>
+
+</html>

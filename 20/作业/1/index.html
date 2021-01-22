@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业1</title>
+    <script>
+        // 定义长度为5的数组
+        var arr = new Array(5);
+        // 保存某学员五科成绩
+        for (x = 0; x < arr.length; x++) {
+            arr[x] = prompt('输入第' + (x + 1) + '科成绩')
+        }
+        // 转浮点数
+        for (x in arr) {
+            arr[x] = parseFloat(arr[x])
+        }
+        // 计算总分和平均分
+        var score = 0;
+        for (x in arr) {
+            score += arr[x]
+        }
+        alert('总分:' + score + '\n平均分：' + score / arr.length);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
