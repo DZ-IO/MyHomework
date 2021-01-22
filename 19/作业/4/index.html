@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业4</title>
+</head>
+
+<body>
+    <script>
+        // 素数的定义：不能被1和自身整除
+        // 3-100之间的全部数字
+        for (var i = 3; i <= 100; i++) {
+            // 从2开始转（肯定能被1和自身整除）
+            var j = 2;
+            // 转到i结束
+            for (; j < i; j++) {
+                // 判断整除
+                if (i % j == 0) {
+                    // 整出后跳出
+                    break;
+                }
+            }
+            if (i == j) {
+                document.write(i + '&nbsp;&nbsp;')
+            }
+        }
+    </script>
+</body>
+
+</html>

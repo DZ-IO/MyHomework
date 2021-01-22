@@ -6,22 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>作业2</title>
     <script>
-        // 由用户输入五个姓名
+        // 使用字符串数组来保存
         var arr = new Array(5);
+        // 用户输入的五个姓名
         for (x = 0; x < arr.length; x++) {
             arr[x] = prompt('输入第' + (x + 1) + '个姓名')
         }
         // 先顺序重排
         arr.sort();
-        // 使用字符串数组来保存用户输入的五个姓名
-        var arr2 = new Array();
         // 并逆序重排
-        for (x = arr.length - 1; x >= 0; x--) {
-            arr2.push(arr[x])
+        for (x = 0; x < arr.length / 2; x++) {
+            val = arr[x]
+            arr[x] = arr[arr.length - x - 1]
+            arr[arr.length - x - 1] = val
         }
         // 后输出该数组到控制台
-        console.log(arr2)
-        document.write(arr2)
+        console.log(arr)
+        document.write(arr)
     </script>
 </head>
 
