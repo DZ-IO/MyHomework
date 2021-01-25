@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var students = new Array()
+
+        function add() {
+            students.push(prompt('请输入学员姓名'))
+        }
+
+        function show() {
+            document.getElementById('div').innerHTML = students.join()
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" onclick="add()" value="添加">
+    <input type="button" onclick="show()" value="展示">
+    <div id="div"></div>
+</body>
+
+</html>

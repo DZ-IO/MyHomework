@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业1</title>
+    <script>
+        // 输入一个字符串
+        var str = prompt('请输入字符串');
+        str = str.split('');
+        // 再输入要查找的字符
+        var f = prompt('输入查找的字符')
+        var n = 0;
+        // 判断该字符在该字符串中出现的次数
+        for (x in str) {
+            if (str[x] == f) {
+                n += 1;
+            }
+        }
+        alert('出现了' + n + '次')
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

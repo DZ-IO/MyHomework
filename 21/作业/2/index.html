@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业2</title>
+</head>
+
+<body>
+    <script>
+        var arr = new Array();
+        // 10个
+        while (arr.length < 10) {
+            // 随机生成10-100之间
+            rand = Math.floor(Math.random() * (100 - 10 + 1) + 10);
+            // 不重复的整数
+            if (arr.lastIndexOf(rand) < 0) {
+                arr.push(rand);
+            }
+        }
+        for (x in arr) {
+            document.write(arr[x] + '<br>')
+        }
+    </script>
+</body>
+
+</html>
