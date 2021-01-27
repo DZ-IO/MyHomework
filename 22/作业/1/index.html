@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业1</title>
+    <script>
+        function btn() {
+            // 获取年份
+            year = document.getElementById('form').year.value;
+            // 获取月份
+            mounth = document.getElementById('form').mounth.value;
+            // 获取这月1号是周几
+            var day = new Date(year, mounth - 1, 1);
+            day = ['日', '一', '二', '三', '四', '五', '六'][day.getDay()]
+            document.getElementById('div').innerHTML = year + '年' + mounth + '月1号是周' + day
+        }
+    </script>
+</head>
+
+<body>
+    <form action="" id="form">
+        <p><input type="text" name='year' placeholder="输入年份"></p>
+        <p><input type="text" name='mounth' placeholder="输入月份"></p>
+        <p><input type="button" onclick="btn()" value="提交"></p>
+    </form>
+    <div id="div"></div>
+</body>
+
+</html>

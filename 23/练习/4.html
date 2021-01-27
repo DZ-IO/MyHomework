@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开启或结束定时函数</title>
+</head>
+
+<body>
+    <h1 id="time"></h1>
+    <input type="button" value="开启" onclick="start()">
+    <input type="button" value="关闭" onclick="stop()">
+    <script>
+        function timeUpdate() {
+            var now = new Date();
+            var hh = now.getHours();
+            var mm = now.getMinutes();
+            var ss = now.getSeconds();
+            document.getElementById('time').innerHTML = hh + ':' + mm + ':' + ss
+        }
+        // 定义全局变量auto
+        var auto = null;
+
+        function start() {
+            // 把定时函数赋值给一个全局变量方便处理
+            auto = setInterval('timeUpdate()', 1000)
+        }
+
+        function stop() {
+            // 利用全局变量结束定时函数
+            clearInterval(auto)
+            document.getElementById('time').innerHTML = ""
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document对象</title>
+    <script>
+        function changetitle() {
+            document.getElementsByTagName('title')[0].innerHTML = 'test'
+        }
+
+        function gname() {
+            gnamea = document.getElementsByName('name1')
+            msg = '';
+            // 踩坑记录，不能用for-in
+            for (var x = 0; x < gnamea.length; x++) {
+                msg += gnamea[x].value + '<br>'
+            }
+            document.getElementById('msg').innerHTML = msg
+        }
+
+        function gtagname() {
+            gtagnamea = document.getElementsByTagName('input')
+            msg = ''
+            for (var x = 0; x < gtagnamea.length; x++) {
+                msg += gtagnamea[x].value + '<br>'
+            }
+            document.getElementById('msg').innerHTML = msg
+        }
+
+        function gclassname() {
+            gclassnamea = document.getElementsByClassName('cla1')
+            msg = ''
+            for (var x = 0; x < gclassnamea.length; x++) {
+                msg += gclassnamea[x].value + '<br>'
+            }
+            document.getElementById('msg').innerHTML = msg
+        }
+
+        function gid() {
+            document.getElementById('msg').innerHTML = document.getElementById("id1").value
+        }
+
+        function fin() {
+            gclassnamea = document.getElementsByClassName('cla1')
+            msg = ''
+            for (x in gclassnamea) {
+                msg += x + '<br>'
+            }
+            document.getElementById('msg').innerHTML = msg
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="改标题" onclick="changetitle()">
+    <input type="text" name="name1" class="cla1" id="id1" value="test1">
+    <input type="text" name="name1" class="cla1" value="test2">
+    <input type="text" name="name1" id="" value="test3">
+    <input type="button" value="name" onclick="gname()">
+    <input type="button" value="tagname" onclick="gtagname()">
+    <input type="button" value="id" onclick="gid()">
+    <input type="button" value="class" onclick="gclassname()">
+    <input type="button" value="for-in结果" onclick="fin()">
+    <div id="msg"></div>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- Style用老师的了，反正我能看懂 -->
+    <style>
+        #div {
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto
+        }
+        
+        img {
+            width: 1280px;
+            height: 720px;
+        }
+        
+        ul {
+            position: absolute;
+            right: 10px;
+            bottom: -10px;
+            width: 100px;
+            height: 50px;
+        }
+        
+        li {
+            width: 30px;
+            height: 30px;
+            float: left;
+            background: pink;
+            list-style: none;
+            margin-left: 10px;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bolder;
+        }
+        
+        .light {
+            background: #000
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div">
+        <!-- 图片p站扒的，来自国G《泡沫冬景》 -->
+        <img class="img" src="img/82514418_p0.png" alt="" />
+        <img class="img" src="img/82514418_p1.png" alt="" />
+
+        <ul>
+            <li>1</li>
+            <li>2</li>
+        </ul>
+
+    </div>
+
+    <script>
+        // 选中所有图片
+        var imgs = document.getElementsByClassName('img');
+        // 选中所有按钮
+        var btns = document.getElementsByTagName('li');
+        // 初始化循环变量
+        var imgindex = 0;
+        // 循环函数
+        function loop() {
+            // 清空所有样式
+            for (i = 0; i < btns.length; i++) {
+                btns[i].className = ''
+                imgs[i].style.display = 'none'
+            }
+            // 循环迭代
+            imgindex++
+            // 循环终止
+            if (imgindex == imgs.length) {
+                imgindex = 0;
+            }
+            // 样式设置
+            btns[imgindex].className = 'light'
+            imgs[imgindex].style.display = 'block'
+        }
+        setInterval('loop()', 1000)
+    </script>
+</body>
+
+</html>

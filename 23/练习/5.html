@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>春节倒计时</title>
+</head>
+
+<body onload="setInterval('time()',1000)">
+    <h1>离春节还剩<span id="time"></span></h1>
+    <script>
+        function time() {
+            // 当前时间
+            var now = new Date();
+            // 春节时间
+            var day = new Date(2021, 1, 12);
+            // 计算时间差
+            var t = day.getTime() - now.getTime();
+            // 换算剩余时间
+            // 天换算      秒     分   时   天
+            var day = t / 1000 / 60 / 60 / 24;
+            // 时换算      秒    分    时  去掉整除的天
+            var hh = t / 1000 / 60 / 60 % 24;
+            // 分换算      秒    分   去掉整除的时
+            var mm = t / 1000 / 60 % 60;
+            // 秒换算      秒    去掉整除的分
+            var ss = t / 1000 % 60;
+            // 展示
+            document.getElementById('time').innerHTML = Math.floor(day) + '天' + Math.floor(hh) + '时' + Math.floor(mm) + '分' + Math.floor(ss) + '秒';
+        }
+    </script>
+</body>
+
+</html>

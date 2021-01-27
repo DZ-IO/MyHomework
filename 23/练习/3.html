@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定时函数</title>
+</head>
+
+<body onload="setInterval('timeUpdate()',1000)">
+    <!-- setInterval(timeUpdate(),1000)：定时执行 -->
+    <!-- Interval:时间间隔 -->
+    <!-- setTimeout(timeUpdate(),1000)：定时执行 -->
+    <h1 id="time"></h1>
+    <script>
+        function timeUpdate() {
+            var now = new Date();
+            var hh = now.getHours();
+            var mm = now.getMinutes();
+            var ss = now.getSeconds();
+            document.getElementById('time').innerHTML = hh + ':' + mm + ':' + ss
+        }
+    </script>
+</body>
+
+</html>

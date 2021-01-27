@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浏览器对象</title>
+    <script>
+        // 展示当前URL
+        document.write(location.href + '<br>');
+        // 展示当前URL路径
+        document.write(location.pathname);
+
+        function change() {
+            // 修改地址栏
+            location.href = location.href + '?c=1';
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="测试" onclick="change()">
+</body>
+
+</html>
