@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节点关系展示</title>
+</head>
+
+<body>
+    <h1>Lorem ipsum dolor sit ame</h1>
+    <div id="div">
+        <h1>Lorem</h1>
+        <ul>
+            <li>ipsum dolor </li>
+            <li>sit amet </li>
+            <li>consectetur adipisicing elit. </li>
+            <li>Voluptatibus delectus dolore</li>
+        </ul>
+    </div>
+    <script>
+        // 选中div
+        var div = document.getElementById('div');
+        // 1.父节点(HTML)
+        console.log(div.parentNode.innerHTML);
+        // 2.子节点列表（包含回车及空格）
+        console.log(div.childNodes.length);
+        // 3.第一个子节点（回车）
+        console.log(div.firstChild.innerHTML);
+        // 4.第一个子元素节点
+        console.log(div.firstElementChild.innerHTML);
+        // 5.最后一个子节点（回车）
+        console.log(div.lastChild.innerHTML);
+        // 6.最后一个元素子节点
+        console.log(div.lastElementChild.innerHTML);
+        // 7.下一个兄弟节点
+        console.log(div.nextSibling.innerHTML);
+        // 8.下一个元素兄弟节点
+        console.log(div.nextElementSibling.innerHTML);
+        // 9.上一个兄弟节点
+        console.log(div.previousSibling.innerHTML);
+        // 10.上一个元素兄弟节点
+        console.log(div.previousElementSibling.innerHTML);
+    </script>
+</body>
+
+</html>

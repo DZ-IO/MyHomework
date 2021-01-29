@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片展示</title>
+    <script>
+        function imgswitch() {
+            // 选中所有单选框
+            var radio = document.getElementsByName('radio');
+            // 遍历
+            for (i = 0; i < radio.length; i++) {
+                if (radio[i].checked) {
+                    // 处理图片
+                    var img = document.getElementById('img');
+                    img.setAttribute('src', '/23/练习/img/82514418_p' +
+                        i + '.png')
+                    img.setAttribute('title', '图片' + (i + 1))
+                    img.nextElementSibling.innerHTML = '图片' + (i + 1)
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="radio" name="radio" value="0" onclick="imgswitch()">图片1
+    <input type="radio" name="radio" value="1" onclick="imgswitch()">图片2
+    <br>
+    <img src="" alt="" id="img" width="360px">
+    <p></p>
+</body>
+
+</html>

@@ -1,43 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cn">
+
 <head>
     <meta charset="UTF-8">
     <title>这动画很皮</title>
     <style>
-        div{
+        div {
             height: 50px;
             width: 100px;
             padding: 30px;
             border-radius: 10px;
             position: relative;
         }
-        @keyframes za0{
-            from{
+        
+        @keyframes za0 {
+            from {
                 background-color: #6cf;
                 padding: 0px;
                 border-radius: 0px;
-                }
-            to{
+            }
+            to {
                 background-color: #ffffff;
                 padding: 30px;
                 border-radius: 10px;
             }
         }
-        #a0{
+        
+        #a0 {
             animation: za0 2s;
         }
+        
         @keyframes za1 {
-            0%{background-color: #ff0000;top: 0px;left: 0px;}
-            50%{background-color: #00ff00;top: 200px;left: 200px;}
-            100%{background-color: #ff0000;top: 0px;left: 0px;}
+            0% {
+                background-color: #ff0000;
+                top: 0px;
+                left: 0px;
+            }
+            50% {
+                background-color: #00ff00;
+                top: 200px;
+                left: 200px;
+            }
+            100% {
+                background-color: #ff0000;
+                top: 0px;
+                left: 0px;
+            }
         }
-        #a1{
+        
+        #a1 {
             animation: za1 2s infinite alternate;
         }
     </style>
 </head>
+
 <body>
     <div id=a0>变个色,变个形</div>
     <div id=a1>反复横跳</div>
 </body>
+
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业1 表头复选框的全选全不选</title>
+    <script>
+        var chekbox = document.getElementsByTagName('input');
+        // 全选
+        function selectAll() {
+            for (var x = 1; x < chekbox.length; x++)
+                chekbox[x].checked = chekbox[0].checked
+        }
+        // 反选
+        function noneSelect() {
+            var checked = true
+            for (var x = 1; x < chekbox.length; x++)
+                if (!chekbox[x].checked) {
+                    checked = false
+                }
+            chekbox[0].checked = checked
+        }
+    </script>
+</head>
+
+<body>
+    <table border="1px">
+        <tr>
+            <th>全选<input type="checkbox" name="" id="" onclick="selectAll()"></th>
+            <th>商品名称</th>
+            <th>商品价格</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="" id="" onclick="noneSelect()"></td>
+            <td>苹果</td>
+            <td>2.50</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="" id="" onclick="noneSelect()"></td>
+            <td>电视</td>
+            <td>9999.00</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="" id="" onclick="noneSelect()"></td>
+            <td>航母</td>
+            <td>1000000000.00</td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节点属性展示</title>
+</head>
+
+<body>
+    <ol id="ol">
+        <li>ipsumdolor </li>
+        <li>sit amet </li>
+        <li>consectetur adipisicing elit. </li>
+        <li>Voluptatibus delectus dolore</li>
+    </ol>
+    <script>
+        var ol = document.getElementById('ol');
+        // 节点名称
+        console.log(ol.nodeName);
+        console.log(ol.getAttributeNode('id').nodeName);
+        // 节点值
+        // 元素的节点值为空
+        // 属性的节点值为属性值
+        // 文本的节点值为文本自身
+        console.log(ol.nodeValue);
+        console.log(ol.getAttributeNode('id').nodeValue);
+        console.log(ol.firstElementChild.firstChild.nodeValue);
+        // 节点类型
+        // 元素的节点类型为1
+        // 属性的节点类型为2
+        // 文本的节点类型为3
+        console.log(ol.nodeType);
+        console.log(ol.getAttributeNode('id').nodeType);
+        console.log(ol.firstElementChild.firstChild.nodeType);
+    </script>
+</body>
+
+</html>

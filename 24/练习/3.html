@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节点练习1</title>
+    <script>
+        function buy() {
+            // 初始化变量
+            var cost = 0;
+            var msg = '';
+            // 选中所有复选框
+            var checkbox = document.getElementsByName('goods');
+            // 循环
+            for (var i = 0; i < checkbox.length; i++) {
+                // 判断是否选中
+                if (checkbox[i].checked) {
+                    // 获取数量
+                    num = checkbox[i].nextElementSibling.nextElementSibling.value;
+                    // 获取单价
+                    price = checkbox[i].nextElementSibling.innerHTML;
+                    // 获取文本
+                    item = checkbox[i].nextSibling.nodeValue;
+                    // 处理价格
+                    cost += num * price;
+                    // 处理文本
+                    msg += item + price + '元，数量' + num + '<br>';
+                }
+            }
+            // 写入HTML
+            msg += '总价：' + cost;
+            document.getElementById('msg').innerHTML = msg;
+        }
+    </script>
+</head>
+
+<body>
+    <div align="center">
+        <input type="checkbox" name="goods" value="1" />手枪，单价：<span>5000.00</span><input type="number" min="1" max="100" value="1" /><br/>
+        <input type="checkbox" name="goods" value="2" />冲锋枪，单价：<span>25000.00</span><input type="number" min="1" max="100" value="1" /><br/>
+        <input type="checkbox" name="goods" value="3" />狙击枪，单价：<span>55000.00</span><input type="number" min="1" max="100" value="1" /><br/>
+        <input type="checkbox" name="goods" value="4" />手榴弹，单价：<span>1500.00</span><input type="number" min="1" max="100" value="1" /><br/>
+        <hr/>
+        <input type="button" value="结算" onclick="buy()" /><br/>
+        <h3>总计：</h3>
+        <div id="msg"></div>
+    </div>
+</body>
+
+</html>

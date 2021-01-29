@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业2 获取验证码</title>
+    <script>
+        // 验证码进程
+        var codeprocess = null;
+        var sec = 5;
+        // 获取验证码
+        function getcode() {
+            sec = 5;
+            document.getElementById('btnCode').disabled = true;
+            document.getElementById('code').innerHTML = sec + ' 秒之后获取验证码';
+            // 循环初始化
+            codeprocess = setInterval('codeFunction()', 1000)
+        }
+
+        function codeFunction() {
+            if (sec == 0) {
+                document.getElementById('btnCode').disabled = false;
+                document.getElementById('code').innerHTML = '重新获验证码';
+                clearInterval(codeprocess);
+            } else {
+                document.getElementById('code').innerHTML = sec + ' 秒之后获取验证码';
+            }
+            sec--
+        }
+    </script>
+</head>
+
+<body>
+    <button id='btnCode' onclick="getcode()">获取验证码</button><span id='code'></span>
+</body>
+
+</html>
