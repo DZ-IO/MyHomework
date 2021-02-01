@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function delimg(imge) {
+            var ul = imge.parentNode.parentNode
+            ul.parentNode.removeChild(ul)
+        }
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li><img src="/23/练习/img/82514418_p0.png" height="480px"></li>
+        <li>2021-2-1</li>
+        <li><input type="button" value="删除" onclick="delimg(this)"></li>
+    </ul>
+    <ul>
+        <li><img src="/23/练习/img/82514418_p1.png" height="480px"></li>
+        <li>2021-2-1</li>
+        <li><input type="button" value="删除" onclick="delimg(this)"></li>
+    </ul>
+</body>
+
+</html>

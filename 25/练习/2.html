@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>删改节点</title>
+    <script>
+        function del() {
+            var img = document.getElementById('st');
+            img.parentNode.removeChild(img)
+        }
+
+        function change() {
+            var img = document.getElementById('nd');
+            var nc = document.createElement('img')
+            nc.setAttribute('src', '/23/练习/img/82514418_p1.png')
+            nc.setAttribute('style', 'height:480px;')
+            img.parentNode.replaceChild(nc, img)
+        }
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li><img src="/23/练习/img/82514418_p0.png" height="480px" alt="" id="st">
+            <p><input type="button" value="删" onclick="del()"></p>
+        </li>
+        <li><img src="/23/练习/img/82514418_p0.png" height="480px" alt="" id="nd">
+            <p><input type="button" value="改" onclick="change()"></p>
+        </li>
+    </ul>
+</body>
+
+</html>

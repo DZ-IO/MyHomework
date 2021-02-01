@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业1 分行显示已选爱好</title>
+    <script>
+        // 全局变量
+        msg = '';
+
+        function display() {
+            var inputs = document.getElementsByName('name1')
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].checked) {
+                    msg += inputs[i].nextSibling.nodeValue + '<br>'
+                }
+
+            }
+            document.getElementById('msg').innerHTML = msg
+        }
+    </script>
+</head>
+
+<body>
+    <h3>选择你的爱好:</h3>
+    <ul>
+        <li><input type="checkbox" name="name1" id="">音乐</li>
+        <li><input type="checkbox" name="name1" id="">登山</li>
+        <li><input type="checkbox" name="name1" id="">游泳</li>
+        <li><input type="checkbox" name="name1" id="">阅读</li>
+        <li><input type="checkbox" name="name1" id="">打球</li>
+        <li><input type="checkbox" name="name1" id="">跑步</li>
+        <li><input type="checkbox" name="name1" id="">其他</li>
+    </ul>
+    <hr>
+    <ul>
+        <li><input type="button" name="" id="" value="查看我选择的爱好" onclick="display()"></li>
+    </ul>
+    <p id="msg"></p>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>增加节点</title>
+    <script>
+        function imgswitch() {
+            var app = document.getElementById('app');
+            var radio = document.getElementsByName('radio')
+
+            for (x = 0; x < radio.length; x++) {
+                if (radio[x].checked) {
+                    var img = document.createElement('img')
+                    img.setAttribute('style', 'width:100px;')
+                    img.setAttribute('src', '/23/练习/img/82514418_p' + x + '.png')
+                    app.insertBefore(img, app.firstChild)
+                }
+            }
+        }
+
+        function imgadd() {
+            var app = document.getElementById('app');
+            var radio = document.getElementsByName('radio2')
+
+            for (x = 0; x < radio.length; x++) {
+                if (radio[x].checked) {
+                    var img = document.createElement('img')
+                    img.setAttribute('style', 'width:100px;')
+                    img.setAttribute('src', '/23/练习/img/82514418_p' + x + '.png')
+                    app.appendChild(img)
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="radio" name="radio" value="0" onclick="imgswitch()">图片1(imgswitch)
+    <input type="radio" name="radio" value="1" onclick="imgswitch()">图片2(imgswitch)
+    <input type="radio" name="radio2" value="0" onclick="imgadd()">图片1(appendChild)
+    <input type="radio" name="radio2" value="1" onclick="imgadd()">图片2(appendChild)
+    <br>
+    <div id="app"></div>
+</body>
+
+</html>

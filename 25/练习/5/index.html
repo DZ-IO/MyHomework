@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #main {
+            text-align: center;
+            width: 1014px;
+            margin: 0 auto;
+        }
+        
+        #adver {
+            position: absolute;
+            left: 10px;
+            top: 30px;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="adver"><img src="img/adv.jpg" /></div>
+    <div id="main"><img src="img/main1.JPG" /><img src="img/main2.JPG" /><img src="img/main3.JPG" /></div>
+
+    <script>
+        var adc = document.getElementById('adver')
+        if (adc.currentStyle) {
+            var adcTop = parseInt(adc.currentStyle.top)
+            var adcLeft = parseInt(adc.currentStyle.left)
+        } else {
+            var adcTop = parseInt(document.defaultView.getComputedStyle(adc, null).top)
+            var adcLeft = parseInt(document.defaultView.getComputedStyle(adc, null).left)
+        }
+        window.onscroll = function() {
+            var top = parseInt(document.documentElement.scrollTop || document.body.scrollTop)
+            var left = parseInt(document.documentElement.scrollLeft || document.body.scrollLeft)
+            adc.style.top = adcTop + top + 'px'
+            adc.style.left = adcLeft + left + 'px'
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            width: 169px;
+            height: 290px;
+            background: url(./img/bg.jpg);
+        }
+        
+        #buttons {
+            padding: 52px 9px 2px;
+        }
+        
+        .button {
+            display: inline-block;
+            width: 47px;
+            height: 23px;
+            font-size: 15px;
+            background: url(./img/menu2.gif);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .button:hover {
+            background: url(./img/menu1.gif);
+        }
+    </style>
+    <script>
+        function sw(index) {
+            var msg = '';
+            for (var i = 0; i < 8; i++) {
+                msg += '<li><a href="">lorem' + index + '</a></li>'
+            }
+            document.getElementById('ol').innerHTML = msg
+        }
+    </script>
+</head>
+
+<body>
+    <div id="main">
+        <div id="buttons">
+            <a href="#" class="button" onmouseover="sw(1)">小说</a>
+            <a href="#" class="button" onmouseover="sw(2)">非小说</a>
+            <a href="#" class="button" onmouseover="sw(3)">少儿</a>
+        </div>
+        <ol id="ol">
+            <li>
+                <a href="">lorem</a>
+            </li>
+            <li>
+                <a href="">lorem</a>
+            </li>
+            <li>
+                <a href="">lorem</a>
+            </li>
+            <li>
+                <a href="">lorem</a>
+            </li>
+            <li>
+                <a href="">lorem</a>
+            </li>
+            <li>
+                <a href="">lorem</a>
+            </li>
+            <li>
+                <a href="">lorem</a>
+            </li>
+            <li>
+                <a href="">lorem</a>
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>
