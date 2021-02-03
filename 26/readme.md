@@ -22,7 +22,7 @@ document.getElementById('id').addEventListener('click', function() {
     alert('test')
 }, false)
 ```
-
+[例子](./练习/1.html) [运行例子](https://homework.zdatek.top/26/练习/1.html)
 * 鼠标事件
 ```html
     <ul>
@@ -43,12 +43,16 @@ document.getElementById('id').addEventListener('click', function() {
 ></ul>
 * 表单事件
 ```html
+    <!-- 重置和提交事件，注意分清是哪重置了 -->
     <form action="" onreset="alert('重置')" onsubmit="alert('提交')">
         <label for="">用户名</label>
+        <!-- 选中事件 -->
         <input type="text" onfocus="alert('选中')" name="" id=""><br>
         <label for="">密码</label>
+        <!-- 焦点丢失事件 -->
         <input type="password" name="" id="" onblur="alert('焦点丢失')"><br>
         <label for="">性别</label>
+        <!-- change事件，当用户更改<input>、<select>和<textarea> 元素的值并提交这个更改时，change 事件在这些元素上触发。（引用自mdn） -->
         <select onchange="alert('改变')" name="" id="">
             <option value="">男</option>
             <option value="">女</option>
@@ -58,11 +62,21 @@ document.getElementById('id').addEventListener('click', function() {
 ```
 > blur：模糊（丢了focus（焦点）就模糊了）
 > 注意分清哪里重置了
+> 其实老师刚讲change的时候我也没搞懂，后来查了mdn就懂了
 * 键盘事件
-```html
-<input type="text" onkeydown="console.log('down')" onkeypress="console.log('press')" onkeyup="console.log('up')">
+```js
+// 按下
+onkeydown="console.log('down')"
+// 按下再弹起
+onkeypress="console.log('press')"
+// 弹起
+onkeyup="console.log('up')"
 ```
 例子(记得打开开发者工具)
 ><input type="text" onkeydown="console.log('down')" onkeypress="console.log('press')" onkeyup="console.log('up')">
 
 * UI事件
+ 1. `onload`加载时触发
+ 2. `onresize`大小改变时触发
+ 3. `onscroll`页面滚动时触发
+[例子](./练习/8.html) [运行例子](https://homework.zdatek.top/26/练习/8.html)
