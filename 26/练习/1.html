@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="test()" id="id"></button>
+    <script>
+        // document.getElementById('id').onclick = function() {
+        //     alert('test')
+        // }
+        // function test() {
+        //     alert('test')
+        // }
+        document.getElementById('id').addEventListener('click', function() {
+            alert('test')
+        }, false)
+    </script>
+</body>
+
+</html>

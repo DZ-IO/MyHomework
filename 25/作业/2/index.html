@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态添加输入框</title>
+    <script>
+        function addInput() {
+            var input = document.createElement('input')
+            input.setAttribute('type', 'text')
+            input.setAttribute('placeholder', '请输入内容')
+            var li = document.createElement('li')
+            li.appendChild(input)
+            document.getElementById('main').appendChild(li)
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="添加" onclick="addInput()">
+    <ul id="main"></ul>
+</body>
+</body>
+
+</html>

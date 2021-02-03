@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>制作带关闭按钮的滚动广告</title>
+    <style>
+        #adcontainer {
+            /* position: fixed; */
+            /* 明明这样就可以 */
+            position: absolute;
+            top: 60px;
+            left: 30px;
+        }
+        
+        #adcontainer img:last-of-type {
+            position: absolute;
+            right: 12px;
+            top: 10px;
+        }
+        
+        #app {
+            margin: 0 auto;
+            width: 993px;
+        }
+    </style>
+    <script>
+        function hiddenad() {
+            document.getElementById('adcontainer').style.display = 'none'
+        }
+    </script>
+</head>
+
+<body>
+    <div id="adcontainer">
+        <img src="./img/advpic.jpg" alt="">
+        <img src="./img/close.jpg" alt="" onclick="hiddenad()">
+    </div>
+    <div id="app">
+        <img src="./img/contentpic.jpg" alt="">
+    </div>
+    <script>
+        var adc = document.getElementById('adcontainer')
+        if (adc.currentStyle) {
+            var adcTop = parseInt(adc.currentStyle.top)
+            var adcLeft = parseInt(adc.currentStyle.left)
+        } else {
+            var adcTop = parseInt(document.defaultView.getComputedStyle(adc, null).top)
+            var adcLeft = parseInt(document.defaultView.getComputedStyle(adc, null).left)
+        }
+        window.onscroll = function() {
+            adc.style.top = adcTop + parseInt(document.documentElement.scrollTop || document.body.scrollTop) + 'px'
+            adc.style.left = adcLeft + parseInt(document.documentElement.scrollLeft || document.body.scrollLeft) + 'px'
+        }
+    </script>
+</body>
+
+</html>

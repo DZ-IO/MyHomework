@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="+" id="btnp">
+    <input type="button" value="-" id="btnm">
+    <p id="p">
+        每个人都有自己的故事，你我都不例外 --某游戏台词
+    </p>
+    <script>
+        var p = document.getElementById('p')
+        var size = 16
+        document.getElementById('btnp').addEventListener('click', function() {
+            size += 2
+            p.style.fontSize = size + 'px'
+        })
+        document.getElementById('btnm').onclick = function() {
+            size -= 2
+            p.style.fontSize = size + 'px'
+        }
+    </script>
+</body>
+
+</html>
