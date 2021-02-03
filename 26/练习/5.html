@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单事件</title>
+</head>
+
+<body>
+    <form action="" onreset="alert('重置')" onsubmit="alert('提交')">
+        <label for="">用户名</label>
+        <input type="text" onfocus="alert('选中')" name="" id=""><br>
+        <label for="">密码</label>
+        <input type="password" name="" id="" onblur="alert('焦点丢失')"><br>
+        <label for="">性别</label>
+        <select onchange="alert('改变')" name="" id="">
+            <option value="">男</option>
+            <option value="">女</option>
+        </select><br>
+        <input type="submit" name="" id=""><input type="reset" name="" id="">
+    </form>
+</body>
+
+</html>

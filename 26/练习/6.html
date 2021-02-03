@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单事件练习</title>
+</head>
+
+<body>
+    <input type="text" name="" id="inp" value="hello kgc" onfocus="onf()" onblur="onb()"><span></span>
+    <script>
+        function onf() {
+            var inp = document.getElementById('inp')
+            var s = inp.nextElementSibling
+            s.innerHTML = '至少6-12位'
+            if (inp.value == 'hello kgc') {
+                inp.value = ''
+                inp.style.color = 'red'
+            }
+        }
+
+        function onb() {
+            var inp = document.getElementById('inp')
+            var s = inp.nextElementSibling
+            s.innerHTML = ''
+            if (inp.value == '') {
+                inp.value = 'hello kgc'
+                inp.style.color = 'black'
+            }
+        }
+    </script>
+</body>
+
+
+</html>
