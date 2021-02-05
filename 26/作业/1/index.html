@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自动生成10个li</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        
+        ul li {
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #879;
+            color: #fff;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        function spanli() {
+            // 选中ul
+            var ul = document.getElementById('ul');
+            // 清空
+            ul.innerHTML = ''
+            for (x = 0; x < 10; x++) {
+                var li = document.createElement('li')
+                li.innerHTML = x
+                li.style.backgroundColor = '#' + Math.floor(Math.random() * (999 - 0) + 1)
+                ul.appendChild(li)
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p><input type="button" value="生成10个li" onclick="spanli()"></p>
+    <ul id="ul">
+    </ul>
+</body>
+
+</html>

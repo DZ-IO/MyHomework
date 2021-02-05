@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽盒子</title>
+    <style>
+        #box {
+            width: 150px;
+            height: 150px;
+            background: red;
+            position: absolute;
+            cursor: move;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+
+    <script>
+        var box = document.getElementById('box');
+        box.onmousedown = function(e) {
+            var oEvent = event || e;
+            // 计算差值
+            var x = oEvent.clientX - box.offsetLeft;
+            var y = oEvent.clientY - box.offsetTop;
+            document.onmousemove = function(e) {
+                var oEvent = event || e;
+                // 计算坐标
+                var left = oEvent.clientX - x;
+                var top = oEvent.clientY - y;
+                // 计算最大坐标
+                var maxLeft = document.documentElement.clientWidth - box.offsetWidth;
+                var maxTop = document.documentElement.clientHeight - box.offsetHeight;
+                // 约束
+                if (left < 0) {
+                    left = 0;
+                }
+                if (top < 0) {
+                    top = 0;
+                }
+                if (left > maxLeft) {
+                    left = maxLeft;
+                }
+                if (top > maxTop) {
+                    top = maxTop;
+                }
+                // 赋值
+                box.style.left = left + 'px';
+                box.style.top = top + 'px';
+            }
+        }
+        box.onmouseup = function() {
+            document.onmousemove = null
+        }
+    </script>
+
+</body>
+
+</html>

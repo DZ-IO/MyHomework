@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冒泡事件</title>
+    <style>
+        #div {
+            width: 120px;
+            height: 120px;
+            background-color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div"><button id="button">点我</button></div>
+    <script>
+        document.getElementsByTagName('body')[0].onclick = function() {
+            alert('body被点')
+        }
+        document.getElementById('div').onclick = function() {
+            alert('div被点')
+        }
+        document.getElementById('button').onclick = function() {
+            alert('button被点')
+        }
+    </script>
+</body>
+
+</html>

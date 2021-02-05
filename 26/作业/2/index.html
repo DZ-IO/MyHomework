@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>减字功能</title>
+</head>
+
+<body>
+    <textarea name="" id="" cols="30" rows="10" onkeypress="checkinput()" onkeyup="checkinput()"></textarea><span>还可以输入<span id="textn"></span>个字</span>
+    <script>
+        max = 40
+        var textn = document.getElementById('textn')
+        textn.innerHTML = max
+
+        function checkinput() {
+            var ta = document.getElementsByTagName('textarea')[0]
+            textn.innerHTML = max - ta.textLength
+            if (max - ta.textLength == 0) {
+                ta.readOnly = true
+            }
+        }
+    </script>
+</body>
+
+</html>

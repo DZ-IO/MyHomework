@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>右键菜单</title>
+    <style>
+        #menu {
+            position: absolute;
+            display: none;
+            width: 100px;
+            height: 200px;
+            background-color: #ccc;
+            top: 0px;
+            left: 0px;
+            list-style: none;
+        }
+        
+        #menu li {
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="menu">
+        <li>最小化</li>
+        <li>最大化</li>
+        <li>
+            <hr>
+        </li>
+        <li>关闭</li>
+    </ul>
+    <script>
+        var menu = document.getElementById('menu')
+        document.oncontextmenu = function(e) {
+            menu.style.display = 'block'
+            menu.style.left = e.clientX + 'px'
+            menu.style.top = e.clientY + 'px'
+            return false
+        }
+        document.onclick = function() {
+            menu.style.display = 'none'
+        }
+    </script>
+</body>
+
+</html>

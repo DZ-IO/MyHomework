@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{ padding: 0px; margin: 0px}
+        #small{ width: 300px; height: 225px; float: left; border: 1px #000 solid; position: relative;}
+        #big{ width: 300px; height: 300px; float: left ; overflow: hidden; border: 1px #000 solid; margin-left: 30px; position: relative;}
+        #mark{ width: 100px; height: 100px; opacity: 0.3; background: #000; position:  absolute; left: 0px ;top: 0px; cursor: move;}
+        #tu{ position: absolute;; left: 0px top:0px;}
+    </style>
+</head>
+<body>
+<div id='box'>
+    <div id='small'>
+        <img src="images/smallpic.jpg" alt="">
+        <span id='mark'></span>
+    </div>
+    <div id='big'>
+        <img src="images/bigpic.jpg" alt="" id='tu'>
+    </div>
+</div>
+</body>
+</html>
