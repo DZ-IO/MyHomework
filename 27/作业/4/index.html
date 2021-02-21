@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+    <title>文字自动切换</title>
+    <style>
+        #div {
+            overflow: hidden;
+            line-height: 24px;
+            height: 24px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="div">Lorem ipsum dolor sit <br> amet consectetur adipisicing elit <br>Quibusdam nam corporis itaque
+        <br>doloremque inventore sapiente commodi debitis aperiam <br>facere eos consequatur enim mollitia accusamus dolores aut ea possimus fugit corrupti!</div>
+    <script>
+        var div = document.getElementById('div')
+
+        function scr() {
+            div.scrollTop += 1
+            if (div.scrollTop == div.scrollTopMax) {
+                div.scrollTop = 0
+            }
+        }
+        s = setInterval('scr()', 30)
+        div.onmouseover = function() {
+            clearInterval(s)
+        }
+        div.onmouseout = function() {
+            s = setInterval('scr()', 30)
+        }
+    </script>
+</body>
+
+</html>

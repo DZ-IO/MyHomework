@@ -8,7 +8,8 @@
 </head>
 
 <body>
-    <textarea name="" id="" cols="30" rows="10" onkeypress="checkinput()" onkeyup="checkinput()"></textarea><span>还可以输入<span id="textn"></span>个字</span>
+    <!-- 采坑记录：明明一个maxlength就可以解决的东西 -->
+    <textarea name="" id="" cols="30" rows="10" maxlength="40" onkeyup="checkinput()"></textarea><span>还可以输入<span id="textn"></span>个字</span>
     <script>
         max = 40
         var textn = document.getElementById('textn')
@@ -17,9 +18,6 @@
         function checkinput() {
             var ta = document.getElementsByTagName('textarea')[0]
             textn.innerHTML = max - ta.textLength
-            if (max - ta.textLength == 0) {
-                ta.readOnly = true
-            }
         }
     </script>
 </body>

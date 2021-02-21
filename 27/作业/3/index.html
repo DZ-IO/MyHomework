@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>图片时钟</title>
+    <style>
+        ul {
+            margin: 200px auto 0;
+            padding: 0;
+            width: 400px;
+            height: 70px;
+        }
+        
+        li {
+            list-style: none;
+            position: relative;
+            width: 50px;
+            height: 70px;
+            overflow: hidden;
+            float: left;
+        }
+        
+        li div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50px;
+            height: 140px;
+        }
+        
+        li img {
+            float: left;
+        }
+        
+        li span {
+            display: block;
+            background: url('img/c.jpg');
+            width: 50px;
+            height: 70px;
+        }
+        
+        li span.active {
+            background: url('img/b.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="box">
+        <li>
+            <div>
+                <img src="img/0.jpg" />
+                <img src="img/0.jpg" />
+            </div>
+        </li>
+        <li>
+            <div>
+                <img src="img/0.jpg" />
+                <img src="img/0.jpg" />
+            </div>
+        </li>
+        <li><span class="active"></span></li>
+        <li>
+            <div>
+                <img src="img/0.jpg" />
+                <img src="img/0.jpg" />
+            </div>
+        </li>
+        <li>
+            <div>
+                <img src="img/0.jpg" />
+                <img src="img/0.jpg" />
+            </div>
+        </li>
+        <li><span></span></li>
+        <li>
+            <div>
+                <img src="img/0.jpg" />
+                <img src="img/0.jpg" />
+            </div>
+        </li>
+        <li>
+            <div>
+                <img src="img/0.jpg" />
+                <img src="img/0.jpg" />
+            </div>
+        </li>
+    </ul>
+</body>
+<script>
+    function convertNum(input) {
+        if (input < 10) {
+            return 0 + input.toString().split('')
+        } else {
+            return input.toString().split('')
+        }
+    }
+    var clock = document.getElementById('box').childNodes
+    var hh1 = clock[1].firstElementChild.firstElementChild
+    var hh2 = clock[3].firstElementChild.firstElementChild
+    var mm1 = clock[7].firstElementChild.firstElementChild
+    var mm2 = clock[9].firstElementChild.firstElementChild
+    var ss1 = clock[13].firstElementChild.firstElementChild
+    var ss2 = clock[15].firstElementChild.firstElementChild
+    var h = true
+    setInterval(function() {
+        var date = new Date
+        hh1.src = 'img/' + convertNum(date.getHours())[0] + '.jpg'
+        hh2.src = 'img/' + convertNum(date.getHours())[1] + '.jpg'
+        mm1.src = 'img/' + convertNum(date.getMinutes())[0] + '.jpg'
+        mm2.src = 'img/' + convertNum(date.getMinutes())[1] + '.jpg'
+        ss1.src = 'img/' + convertNum(date.getSeconds())[0] + '.jpg'
+        ss2.src = 'img/' + convertNum(date.getSeconds())[1] + '.jpg'
+        h = !h
+        if (h) {
+            clock[5].firstElementChild.className = 'active'
+            clock[11].firstElementChild.className = 'active'
+        } else {
+            clock[5].firstElementChild.className = ''
+            clock[11].firstElementChild.className = ''
+        }
+    }, 500)
+</script>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>图片放大</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0
+        }
+        
+        #box {
+            width: 600px;
+            height: 300px;
+            border: 1px red solid;
+            margin: 100px auto;
+            position: relative;
+        }
+        
+        #box ul li {
+            list-style: none;
+            float: left;
+            width: 200px;
+            height: 150px
+        }
+        
+        #box ul li img {
+            width: 100%;
+            height: 100%
+        }
+        
+        .mark {
+            width: 100%;
+            height: 100vh;
+            background: #000;
+            opacity: 0.5;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+        
+        .pic {
+            width: 400px;
+            height: 200px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -200px;
+            margin-top: -100px
+        }
+        
+        .close {
+            width: 20px;
+            height: 20px;
+            background: red;
+            text-align: center;
+            position: absolute;
+            left: 500px;
+            top: 50px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function disbig(f) {
+            var body = document.getElementsByTagName('body')[0];
+            // 创建遮罩层
+            var mark = document.createElement('div');
+            mark.className = 'mark';
+            body.appendChild(mark);
+            // 创建大图容器
+            var pic = document.createElement('div');
+            pic.className = 'pic';
+            // 创建图片标签
+            var img = document.createElement('img');
+            img.src = f.src;
+            pic.appendChild(img);
+            // 创建X
+            var x = document.createElement('span')
+            x.innerHTML = 'x'
+            x.className = 'close'
+            x.onclick = function() {
+                body.removeChild(pic)
+                body.removeChild(mark)
+            }
+            pic.appendChild(x)
+            body.appendChild(pic);
+        }
+    </script>
+</head>
+
+<body>
+    <div id='box'>
+        <ul>
+            <li><img src="img/1.jpg" alt="" onclick="disbig(this)"></li>
+            <li><img src="img/2.jpg" alt="" onclick="disbig(this)"></li>
+            <li><img src="img/3.jpg" alt="" onclick="disbig(this)"></li>
+            <li><img src="img/4.jpg" alt="" onclick="disbig(this)"></li>
+            <li><img src="img/5.jpg" alt="" onclick="disbig(this)"></li>
+            <li><img src="img/6.jpg" alt="" onclick="disbig(this)"></li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>放大镜</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px
+        }
+        
+        #small {
+            width: 300px;
+            height: 225px;
+            float: left;
+            border: 1px #000 solid;
+            position: relative;
+        }
+        
+        #big {
+            width: 300px;
+            height: 300px;
+            float: left;
+            overflow: hidden;
+            border: 1px #000 solid;
+            margin-left: 30px;
+            position: relative;
+        }
+        
+        #mark {
+            width: 100px;
+            height: 100px;
+            opacity: 0.3;
+            background: #000;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            cursor: move;
+        }
+        
+        #tu {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='box'>
+        <div id='small'>
+            <img src="images/smallpic.jpg" alt="">
+            <span id='mark'></span>
+        </div>
+        <div id='big'>
+            <img src="images/bigpic.jpg" alt="" id='tu'>
+        </div>
+    </div>
+    <script>
+        // 选中small、Mark和tu
+        var small = document.getElementById('small');
+        var mark = document.getElementById('mark');
+        var tu = document.getElementById('tu');
+
+        small.onmousemove = function(e) {
+            var oevent = event || e
+            var left = oevent.clientX - small.offsetLeft - 50
+            var top = oevent.clientY - small.offsetTop - 50
+            if (top < 0) {
+                top = 0
+            }
+            if (left < 0) {
+                left = 0
+            }
+            if (top > small.offsetHeight - mark.offsetHeight) {
+                top = small.offsetHeight - mark.offsetHeight
+            }
+            if (left > small.offsetWidth - mark.offsetWidth) {
+                left = small.offsetWidth - mark.offsetWidth
+            }
+            mark.style.left = left + 'px'
+            mark.style.top = top + 'px'
+                // 采坑记录：比例问题
+            tu.style.left = 0 - left * (tu.offsetWidth / small.offsetWidth) + 'px'
+            tu.style.top = 0 - top * (tu.offsetHeight / small.offsetHeight) + 'px'
+        }
+    </script>
+</body>
+
+</html>
