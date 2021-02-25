@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/check.js"></script>
+</head>
+
+<body>
+    <form action="success.html" onsubmit="return checkAll()">
+        <div>
+            <label for=""><span>会员名：</span><input type="text" id="user" class="text" onfocus="showUser()" onblur="checkUser()"></label>
+            <p id="userMsg" class="message"><i class="active"></i>6-12个字符，推荐使用中文会员名</p>
+        </div>
+        <div>
+            <label for=""><span>登录密码：</span><input type="password" id="psd" class="text" onfocus="showPsd()" onblur="checkPsd()"></label>
+            <p id="psdMsg" class="message"><i class="active"></i>6-12个字符</p>
+        </div>
+        <div>
+            <label for=""><span>确认密码：</span><input type="password" id="psd2" class="text" onfocus="showPsd2()" onblur="checkPsd2()"></label>
+            <p id="psd2Msg" class="message"><i class="active"></i>请再输入一次</p>
+        </div>
+        <div>
+            <input type="submit" value="同意协议并注册" id="submitBtn">
+        </div>
+    </form>
+</body>
+
+</html>

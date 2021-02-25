@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>表单验证</title>
+    <style type="text/css">
+        #a {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        textarea {
+            font-size: 17px;
+        }
+        
+        .okStyle {
+            color: blue;
+        }
+        
+        .errStyle {
+            color: red;
+        }
+    </style>
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <form action="" method="post" id="form" onsubmit="check()">
+        <table border="1">
+            <tr>
+                <td colspan="2">&nbsp;</td>
+                <td rowspan="10" id="a"><img alt="" src="QQ截图20141029231911.jpg" />阅读贵美网服务协议<br />
+                    <textarea rows="12" cols="30">欢迎阅读服务条款协议......</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>登录名：</td>
+                <td><input id="userName" type="text" onblur="checkName()" />（可包含a-z、0-9和下划线）<span id="userNameMsg"></span></td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td><input id="psw" type="password" onblur="checkPsw()" />（至少包含6个字符）<span id="pswMsg"></span></td>
+            </tr>
+            <tr>
+                <td>再次输入密码：</td>
+                <td><input id="psw2" type="password" onblur="checkPsw2()" /><span id="psw2Msg"></span></td>
+            </tr>
+            <tr>
+                <td>电子邮箱：</td>
+                <td><input id="email" type="text" onblur="checkEmail()" />（必须包含@和.字符）<span id="emailMsg"></span></td>
+            </tr>
+            <tr>
+                <td>性别：</td>
+                <td>
+                    <input name="sex" type="radio" value="男" checked="checked" /><img alt="男" src="男.jpg" width="20">男
+                    <input name="sex" type="radio" value="女" /><img alt="女" src="女.jpg" width="20">女
+                </td>
+            </tr>
+            <tr>
+                <td>头像：</td>
+                <td><input name="tx" type="file" /></td>
+            </tr>
+            <tr>
+                <td>爱好：</td>
+                <td>
+                    <input name="aihao" type="checkbox" />运动&nbsp;
+                    <input name="aihao" type="checkbox" />聊天&nbsp;
+                    <input name="aihao" type="checkbox" />玩游戏&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td>喜欢的城市：</td>
+                <td>
+                    <select name="city">
+                        <option value="choose">[请选择]</option>
+                        <option value="bj">北京</option>
+                        <option value="sh">上海</option>
+                        <option value="gz">广州</option>
+                        <option value="cq">重庆</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="submit" value="同意右侧服务条款，提交注册信息" />
+                    <input type="reset" value="重置" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
