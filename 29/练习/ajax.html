@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            // 创建ajax对象
+            // IE6及以下浏览器不支持Ajax，要上ActiveX
+            if (window.XMLHttpRequest) {
+                var ajax = new XMLHttpRequest()
+            } else {
+                var ajax = new ActiveXObject('Microsoft.XMLHTTP')
+            }
+            // 连接服务器
+            ajax.open('GET', 'cookieFunction.js', true);
+            // 发送请求
+            ajax.send()
+            ajax.onreadystatechange = function() {
+                if (ajax.readyState == 4 && ajax.status == 200) {
+                    document.write(ajax.responseText)
+                } else {
+                    document.write(ajax.status)
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
