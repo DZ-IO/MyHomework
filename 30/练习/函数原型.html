@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数原型</title>
+</head>
+
+<body>
+    <h1 id="id1"></h1>
+    <script>
+        function $(text) {
+            return document.querySelector(text)
+        }
+        // 创建构造函数
+        function User(uid, nickname, v) {
+            this.uid = uid
+            this.nickname = nickname
+            this.v = v
+        }
+        // 使用原型定义方法
+        User.prototype.showUser = function() {
+            return '用户ID：' + this.uid + '<br>昵称：' + this.nickname + '<br>泽大账户系统个人认证：' + this.v
+        }
+        var user1 = new User(1, '大泽', '泽大账户系统开发者')
+        $('#id1').innerHTML = user1.showUser()
+        console.log(user1)
+    </script>
+</body>
+
+</html>
